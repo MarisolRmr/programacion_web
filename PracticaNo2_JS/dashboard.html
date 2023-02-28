@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2030112 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+  <style>
+
+ #container {
+	 position: relative;
+	 margin: auto;
+	 overflow: hidden;
+	 width: 700px;
+	 height: 250px;
+   display: flex;
+   justify-content: center;
+}
+ h1 {
+	 font-size: 0.9em;
+	 font-weight: 100;
+	 letter-spacing: 3px;
+	 padding-top: 5px;
+	 color: #fcfcfc;
+	 padding-bottom: 5px;
+	 text-transform: uppercase;
+}
+
+ .alert {
+	 font-weight: 700;
+	 letter-spacing: 5px;
+   font-size: 20px;
+   color: #4ec07d;
+}
+ #face_p {
+	 margin-top: -5px;
+	 font-size: 18px;
+	 font-weight: 100;
+	 color: #5e5e5e;
+	 letter-spacing: 1px;
+}
+ #success-box {
+	 width: 35%;
+	 height: 100%;
+	 left: 12%;
+	 perspective: 40px;
+}
+ .dot {
+	 width: 8px;
+	 height: 8px;
+	 background: #f9b5f8;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: 4%;
+	 right: 6%;
+}
+ .dot:hover {
+	 background: #e390da;
+}
+ .two {
+	 right: 12%;
+	 opacity: 0.5;
+}
+ .face {
+	 position: absolute;
+	 width: 22%;
+	 height: 22%;
+	 background: #fcfcfc;
+	 border-radius: 50%;
+	 border: 1px solid #777;
+	 top: 21%;
+	 left: 37.5%;
+	 z-index: 2;
+	 animation: bounce 1s ease-in infinite;
+}
+ .face2 {
+	 position: absolute;
+	 width: 22%;
+	 height: 22%;
+	 background: #fcfcfc;
+	 border-radius: 50%;
+	 border: 1px solid #777;
+	 top: 21%;
+	 left: 37.5%;
+	 z-index: 2;
+	 animation: roll 3s ease-in-out infinite;
+}
+ .eye {
+	 position: absolute;
+	 width: 5px;
+	 height: 5px;
+	 background: #777;
+	 border-radius: 50%;
+	 top: 40%;
+	 left: 20%;
+
+}
+ .right {
+	 left: 68%;
+}
+ .mouth {
+	 position: absolute;
+	 top: 43%;
+	 left: 41%;
+	 width: 7px;
+	 height: 7px;
+	 border-radius: 50%;
+}
+ .happy {
+	 border: 2px solid;
+	 border-color: transparent #777 #777 transparent;
+	 transform: rotate(45deg);
+}
+ .shadow {
+	 position: absolute;
+	 width: 21%;
+	 height: 3%;
+	 opacity: 0.5;
+	 background: #777;
+	 left: 40%;
+	 top: 43%;
+	 border-radius: 50%;
+	 z-index: 1;
+}
+ .scale {
+	 animation: scale 1s ease-in infinite;
+}
+ .move {
+	 animation: move 3s ease-in-out infinite;
+}
+ .message {
+	 position: absolute;
+	 width: 100%;
+	 text-align: center;
+	 height: 40%;
+	 top: 47%;
+}
+ @keyframes bounce {
+	 50% {
+		 transform: translateY(-10px);
+	}
+}
+ @keyframes scale {
+	 50% {
+		 transform: scale(0.9);
+	}
+}
+ @keyframes roll {
+	 0% {
+		 transform: rotate(0deg);
+		 left: 25%;
+	}
+	 50% {
+		 left: 60%;
+		 transform: rotate(168deg);
+	}
+	 100% {
+		 transform: rotate(0deg);
+		 left: 25%;
+	}
+}
+ @keyframes move {
+	 0% {
+		 left: 25%;
+	}
+	 50% {
+		 left: 60%;
+	}
+	 100% {
+		 left: 25%;
+	}
+}
+
+  </style>
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a class="nav-link" href="dashboard.html">Home</a>
+      </li>
+    </ul>
+  </nav> <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: darkslateblue;">
+    <!-- Brand Logo -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="images/me.jpeg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="dashboard.html" class="d-block">Marisol Romero</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2" style="background-color: darkslateblue;">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-header">Registros</li>
+          <li class="nav-item">
+            <a href="usuarios.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Usuarios
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="productos.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Productos
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="categorias.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Categoría de Productos
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+             <li class="breadcrumb-item">
+              <a href="dashboard.html">Home</a>
+             </li>
+             <li class="breadcrumb-item active"><a href="login.html">Cerrar Sesión</a></li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+      <div id="container">
+        <div id="success-box">
+          <div class="dot"></div>
+          <div class="dot two"></div>
+          <div class="face2">
+            <div class="eye"></div>
+            <div class="eye right"></div>
+            <div class="mouth happy"></div>
+          </div>
+          <div class="shadow move"></div>
+          <div class="message"><h1 id="he" class="alert">It works!</h1><p id="face_p">We'll be alright - HS</div>
+        </div>
+      </div>
+    
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="justify-content: center;">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner" style="background-color: #fff1d6; color:black;">
+                <h1 style="color:black; font-size:18px;">Usuarios</h1>
+                <p><br></p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a style="background-color: #fff1d6;" href="usuarios.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner" style="background-color: #d3e6ff; color:black;">
+                <h1 style="color:black; font-size:18px;">Productos</h1>
+                <p><br></p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a style="background-color: #d3e6ff;" href="productos.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner" style="background-color: #ffd9d9; color:black;">
+                <h1 style="color:black; font-size:18px;">Categorías</h1>
+                <p><br></p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a style="background-color: #ffd9d9;" href="categorias.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+        
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer" style="background-color: #eadaf9; color:black; display: flex; justify-content: space-between;">
+      <div class="xd" style="display: flex;">
+        <strong><h1 style="color:black;">Lorena Marisol Romero Hernández - 2030112</h1></strong>
+    </div>
+    <div style="display: flex;">
+      <strong><h1 style="color:black;">Programación Web</h1></strong><img src="images/iconss.png" style="width: 35px;">
+    </div>
+    </div>
+
+  </footer>
+
+ </div>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
