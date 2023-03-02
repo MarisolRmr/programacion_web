@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>2030112 | Productos</title>
+  <title>2030112 | Usuarios</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -29,18 +29,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <script src="productos.js"></script>
+  <script src="vistas.js"></script>
 
   <style>
-    h1 {
-      font-size: 0.9em;
-      font-weight: 100;
-      letter-spacing: 3px;
-      padding-top: 5px;
-      color: #fcfcfc;
-      padding-bottom: 5px;
-      text-transform: uppercase;
-   }
+ h1 {
+	 font-size: 0.9em;
+	 font-weight: 100;
+	 letter-spacing: 3px;
+	 padding-top: 5px;
+	 color: #fcfcfc;
+	 padding-bottom: 5px;
+	 text-transform: uppercase;
+}
 
   </style>
 
@@ -132,7 +132,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Registro de Productos</h1>
+            <h1 class="m-0 text-dark">Registro de Usuarios</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -140,77 +140,52 @@
                 <a href="dashboard.html">Home</a>
                </li>
                <li class="breadcrumb-item active"><a href="login.html">Cerrar Sesión</a></li>
-               </li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
-
+    
     <section class="content" style="display: flex; justify-content: center;">
       <div class="card card-primary">
         <div class="card-header" style="display: flex; justify-content: center;">
-          <h3 class="card-title">Ingrese los siguientes datos</h3>
+          <h3 class="card-title">Productos Registrados</h3>
         </div>
-        <!-- /.card-header minlength="3" required -->
-        <!-- form start -->
-        <form id="productos_form" action="" method="post">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm">
-                <!-- text input -->
-                <div class="form-group">
-                  <label>Código</label>
-                  <input type="text" class="form-control" id="code" placeholder="Ingrese Código" >
-                </div>
-              </div>
-              <div class="col-sm">
-                <div class="form-group">
-                  <label>Nombre</label>
-                  <input type="text" class="form-control" id="name" placeholder="Ingrese Nombre" >
-                </div>
-              </div>
-              <div class="col-sm">
-                <div class="form-group">
-                  <label>Categoría</label>
-                  <input type="text" class="form-control" id="cate" placeholder="Ingrese Categoría" >
-                </div>
-              </div>
-            </div>
+        <!-- /.card-header-->
+        <!-- /.card-header -->
+        <div id="contentTable" class="card-body">
+            <table class="table table-bordered">
+              <thead>                  
+                <tr>
+                  <th>Clave</th>
+                  <th>Nombre</th>
+                  <th>Descripción</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody id="tbodys">
+                <!--
+                <tr>
+                  <td>1.</td>
+                  <td>Update software</td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-danger">55%</span></td>
+                </tr>
+                 -->
+              </tbody>
+            </table>
+          </div><!-- /.card-body -->
 
-            <div class="row">
-            <div class="col-sm-6">
-              <!-- text input -->
-              <div class="form-group">
-                <label>Precio de Venta</label>
-              <input type="number" min="0" class="form-control" id="venta" placeholder="Ingrese Precio de Venta" >
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label>Precio de Compra</label>
-              <input type="number" min="0" class="form-control" id="compra" placeholder="Ingrese Precio de Compra" >
-              </div>
-            </div>
-          </div>
-                
-          <!-- /.card-body -->
-        </div>
-          <div class="card-footer">
-            <div style="display: flex; justify-content: space-around;">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-              <button type="reset" class="btn btn-secondary">Limpiar</button>
-            </div>
-          </div>
-        </form>
+        
       </div><!-- /.card -->
     </section>
 
 
-
-    
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer" style="background-color: #eadaf9; color:black; display: flex; justify-content: space-between;">
