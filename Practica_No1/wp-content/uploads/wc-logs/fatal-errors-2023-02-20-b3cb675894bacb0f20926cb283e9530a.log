@@ -1,0 +1,27 @@
+2023-02-20T01:09:02+00:00 CRITICAL Uncaught RuntimeException: Error saving action: MySQL server has gone away in /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:118
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db()
+#1 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action()
+#2 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store()
+#3 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/functions.php(122): ActionScheduler_ActionFactory->recurring_unique()
+#4 /var/www/html/wp-content/plugins/woocommerce/packages/woocommerce-blocks/src/Domain/Services/DraftOrders.php(65): as_schedule_recurring_action()
+#5 /var/www/html/wp-content/plugins/woocommerce/packages/woocommerce-blocks/src/Domain/Services/DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 /var/www/html/wp-includes/class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install()
+#7 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters()
+#8 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#9 /var/www/html/wp-admin/admin-ajax.php(45): do_action()
+#10 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 118
+
+2023-02-20T02:38:50+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:864
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions()
+#1 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim()
+#2 /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch()
+#3 /var/www/html/wp-includes/class-wp-hook.php(308): ActionScheduler_QueueRunner->run()
+#4 /var/www/html/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters()
+#5 /var/www/html/wp-includes/plugin.php(565): WP_Hook->do_action()
+#6 /var/www/html/wp-cron.php(188): do_action_ref_array()
+#7 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 864
+
