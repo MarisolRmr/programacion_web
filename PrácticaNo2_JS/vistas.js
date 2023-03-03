@@ -190,7 +190,7 @@ function libreria_pdfMaker(){
     }
   };
 
-  pdfMake.createPdf(docDefinition).download('tabla.pdf');
+  pdfMake.createPdf(docDefinition).download('Tabla_2030112.pdf');
 }
 
 
