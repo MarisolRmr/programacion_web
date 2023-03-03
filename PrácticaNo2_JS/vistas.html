@@ -132,7 +132,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Registro de Usuarios</h1>
+            <h1 class="m-0 text-dark">Productos</h1>
+            <button id="gnrTble_button" type="button" class="btn btn-primary">Generar Tabla</button>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -146,6 +147,8 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+
+    
     
     <section class="content" style="display: flex; justify-content: center;">
       <div class="card card-primary">
@@ -155,33 +158,21 @@
         <!-- /.card-header-->
         <!-- /.card-header -->
         <div id="contentTable" class="card-body">
-            <table class="table table-bordered">
+            <table id="tbodys" class="table table-bordered">
               <thead>                  
                 <tr>
                   <th>Clave</th>
                   <th>Nombre</th>
+                  <th>Categoría</th>
                   <th>Descripción</th>
                   <th>Precio</th>
+                  <th>Imagen</th>
                 </tr>
               </thead>
-              <tbody id="tbodys">
-                <!--
-                <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-danger">55%</span></td>
-                </tr>
-                 -->
+              <tbody>
               </tbody>
             </table>
           </div><!-- /.card-body -->
-
-        
       </div><!-- /.card -->
     </section>
 
