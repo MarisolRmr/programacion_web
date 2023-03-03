@@ -96,8 +96,9 @@ $( document ).ready(function() {
     limpiarTabla();
   });
 
-  $("#pdf").click(function(){
-    generarPdf();
+  $("#descargarpdf").on("click", function() {
+    //libreria_jsPDF();
+    libreria_pdfMaker();
   });
 
 });
@@ -139,30 +140,57 @@ function filtrarTabla(tipo){
   }
 }
 
-function generarPdf(){
-  console.log("xdp1");
-  var tableHtml = $('#tbodys').html();
 
-    // Define the PDF document
-    var docDefinition = {
-      content: [
-        {
-          table: {
-            body: [
-              // Parse the table HTML and create an array of rows
-              $.map($(tableHtml).find('tr'), function (row) {
-                return $.map($(row).find('th,td'), function (cell) {
-                  return $(cell).text();
-                });
-              })
-            ]
-          }
+// librería jsPDF
+function libreria_jsPDF() {
+  var tabla = document.getElementById("tbodys");
+
+  var pdf = new jsPDF();
+  pdf.addHTML(tabla, function() {
+    // Descargar documento PDF
+    pdf.save("tabla.pdf");
+  });
+}
+
+// librería PDFMaker
+function libreria_pdfMaker(){
+  var bodypdf = [
+    ['Clave', 'Nombre', 'Categoría','Descripción','Precio','Imagen',]
+  ];
+
+  for(var i = 0;i<productos_default.length;i++){
+    var lista = [productos_default[i]['id'], productos_default[i]['nombre'], productos_default[i]['categoria'],productos_default[i]['descripcion'],productos_default[i]['precio'],productos_default[i]['imagen']];
+    bodypdf.push(lista);
+  }
+
+  //console.log(bodypdf);
+  
+  var docDefinition = {
+    content: [
+      {
+        text: 'Productos Registrados',
+        style: 'header'
+      },
+      {
+        style: 'table',
+        table: {
+          body: bodypdf
         }
-      ]
-    };
+      }
+    ],
+    styles: {
+      header: {
+        fontSize: 18,
+        bold: true,
+        margin: [0, 0, 0, 10]
+      },
+      table: {
+        margin: [0, 5, 0, 15]
+      }
+    }
+  };
 
-    // Generate the PDF document
-    pdfMake.createPdf(docDefinition).open();
+  pdfMake.createPdf(docDefinition).download('tabla.pdf');
 }
 
 
