@@ -32,15 +32,21 @@
   <script src="vistas.js"></script>
 
   <style>
- h1 {
-	 font-size: 0.9em;
-	 font-weight: 100;
-	 letter-spacing: 3px;
-	 padding-top: 5px;
-	 color: #fcfcfc;
-	 padding-bottom: 5px;
-	 text-transform: uppercase;
-}
+    h1 {
+      font-size: 0.9em;
+	    font-weight: 100;
+	    letter-spacing: 3px;
+	    padding-top: 5px;
+	    color: #fcfcfc;
+	    padding-bottom: 5px;
+	    text-transform: uppercase;
+    }
+
+    .btn-secondary{
+      background-color: #c7b2fc;
+      border-color: #9c7ced;
+
+    }
 
   </style>
 
@@ -133,7 +139,10 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Productos</h1>
+            <div>
             <button id="gnrTble_button" type="button" class="btn btn-primary">Generar Tabla</button>
+            <button style="background-color: #f7b2fc;" id="gnrTble_button_limpar" type="button" class="btn btn-secondary">Limpiar Tabla</button>
+          </div>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -148,14 +157,24 @@
     </div>
     <!-- /.content-header -->
 
-    
-    
-    <section class="content" style="display: flex; justify-content: center;">
+    <section class="content">
       <div class="card card-primary">
-        <div class="card-header" style="display: flex; justify-content: center;">
-          <h3 class="card-title">Productos Registrados</h3>
-        </div>
-        <!-- /.card-header-->
+        <div class="card-header" style="display: flex; justify-content: space-between;">
+            <h3 class="card-title">Productos Registrados</h3>
+            <div>
+              <button id="gnrTble_button_todo" type="button" class="btn btn-secondary">Todo</button>
+              <button id="gnrTble_button_hoddies" type="button" class="btn btn-secondary" onclick="filtrarTabla('Hoodies')">Hoddies</button>
+              <button id="gnrTble_button_sweatshirt" type="button" class="btn btn-secondary" onclick="filtrarTabla('Sweatshirt')">Sweatshirt</button>
+              <button id="gnrTble_button_accesorios" type="button" class="btn btn-secondary" onclick="filtrarTabla('Accesorios')">Accesorios</button>
+              <button id="gnrTble_button_discos" type="button" class="btn btn-secondary" onclick="filtrarTabla('Discos')">Discos</button>
+          </div>
+
+          <div>
+            <button id="generate-pdf">Generar PDF</button>
+          </div>
+          
+        </div><!-- /.card-header-->
+        
         <!-- /.card-header -->
         <div id="contentTable" class="card-body">
             <table id="tbodys" class="table table-bordered">

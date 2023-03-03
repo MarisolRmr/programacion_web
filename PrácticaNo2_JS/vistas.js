@@ -86,13 +86,20 @@ $( document ).ready(function() {
 
   $("#gnrTble_button").click(function(){
     generarTabla();
-    console.log("Holi");
+  });
+
+  $("#gnrTble_button_todo").click(function(){
+    generarTabla();
+  });
+
+  $("#gnrTble_button_limpar").click(function(){
+    limpiarTabla();
   });
 
 });
 
 function generarTabla(){
-  //console.log(productos_default);
+  limpiarTabla();
   for (var i = 0; i < productos_default.length; i++) {
     var row = "<tr>";
     row += "<td>" + productos_default[i]['id'] + "</td>"; // Clave
@@ -102,10 +109,35 @@ function generarTabla(){
     row += "<td>" + productos_default[i]['precio'] + "</td>"; // Precio
     row += "<td>  <img style='width: 200px;' src='"+productos_default[i]['imagen']+"'>"  + "</td>"; // Imagen
     row += "</tr>";
-
-
-    
     $("#tbodys tbody").append(row);
   }
 }
+
+function limpiarTabla(){
+  $('#tbodys td').remove();
+}
+
+function filtrarTabla(tipo){
+  //console.log(tipo);
+  limpiarTabla();
+  
+  for(var i=0;i<productos_default.length;i++){
+    if(productos_default[i]['categoria']==tipo){
+      console.log(productos_default[i]['id']);
+      console.log(productos_default[i]['nombre']);
+      var row = "<tr>";
+      row += "<td>" + productos_default[i]['id'] + "</td>"; // Clave
+      row += "<td>" + productos_default[i]['nombre'] + "</td>"; // Nombre
+      row += "<td>" + productos_default[i]['categoria'] + "</td>"; // categoría
+      row += "<td style='width: 200px;'> " + productos_default[i]['descripcion'] + "</td>"; // descripción
+      row += "<td>" + productos_default[i]['precio'] + "</td>"; // Precio
+      row += "<td>  <img style='width: 200px;' src='"+productos_default[i]['imagen']+"'>"  + "</td>"; // Imagen
+      row += "</tr>";
+    $("#tbodys tbody").append(row);
+    }
+  }
+}
+
+
+
 
