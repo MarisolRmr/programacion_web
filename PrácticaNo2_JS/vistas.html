@@ -29,7 +29,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/vfs_fonts.js"></script>
+
+
   <script src="vistas.js"></script>
+
 
   <style>
     h1 {
@@ -170,7 +178,9 @@
           </div>
 
           <div>
-            <button id="generate-pdf">Generar PDF</button>
+            <button class="btn btn-block btn-outline-secondary" id="pdf"><div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div></button>
           </div>
           
         </div><!-- /.card-header-->

@@ -25,12 +25,14 @@ $(document).ready(function() {
         $('#name').addClass("is-valid");
       }
 
-      if (!cate) {
+      /*if (!cate) {
         $('#cate').addClass("is-invalid");
       }else{
         $('#cate').removeClass("is-invalid");
         $('#cate').addClass("is-valid");
-      }
+      }*/
+
+      cate = $("#selector_cate").val();
 
       if (!venta || venta<=0) {
         $('#venta').addClass("is-invalid");
@@ -46,7 +48,7 @@ $(document).ready(function() {
         $('#compra').addClass("is-valid");
       }
 
-      if($('#code').hasClass("is-valid") && $('#name').hasClass("is-valid") && $('#cate').hasClass("is-valid")&& $('#venta').hasClass("is-valid")&& $('#compra').hasClass("is-valid")){
+      if($('#code').hasClass("is-valid") && $('#name').hasClass("is-valid") && $('#venta').hasClass("is-valid")&& $('#compra').hasClass("is-valid")){
         flag = true;
         var str = "<label> Código: "+code+"<br> Nombre: "+name+"<br> Categoría: "+cate+"<br> Precio de Venta: "+venta+"<br> Precio de Compra: "+compra+"</label>";
         Swal.fire({

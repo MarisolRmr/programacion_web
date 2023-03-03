@@ -96,6 +96,10 @@ $( document ).ready(function() {
     limpiarTabla();
   });
 
+  $("#pdf").click(function(){
+    generarPdf();
+  });
+
 });
 
 function generarTabla(){
@@ -118,13 +122,10 @@ function limpiarTabla(){
 }
 
 function filtrarTabla(tipo){
-  //console.log(tipo);
   limpiarTabla();
   
   for(var i=0;i<productos_default.length;i++){
     if(productos_default[i]['categoria']==tipo){
-      console.log(productos_default[i]['id']);
-      console.log(productos_default[i]['nombre']);
       var row = "<tr>";
       row += "<td>" + productos_default[i]['id'] + "</td>"; // Clave
       row += "<td>" + productos_default[i]['nombre'] + "</td>"; // Nombre
@@ -138,6 +139,30 @@ function filtrarTabla(tipo){
   }
 }
 
+function generarPdf(){
+  console.log("xdp1");
+  var tableHtml = $('#tbodys').html();
 
+    // Define the PDF document
+    var docDefinition = {
+      content: [
+        {
+          table: {
+            body: [
+              // Parse the table HTML and create an array of rows
+              $.map($(tableHtml).find('tr'), function (row) {
+                return $.map($(row).find('th,td'), function (cell) {
+                  return $(cell).text();
+                });
+              })
+            ]
+          }
+        }
+      ]
+    };
+
+    // Generate the PDF document
+    pdfMake.createPdf(docDefinition).open();
+}
 
 
