@@ -16,7 +16,17 @@ html {
 body {
     font-family: montserrat, arial, verdana;
     background: transparent;
+    height: 95% !important;
+    padding: 0 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/clientes6.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+   /*Navigation menu section*/
+   /*legend section*/
 }
+
+
 
 /*form styles*/
 #msform {

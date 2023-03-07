@@ -114,9 +114,9 @@ function generarTabla(){
     row += "<td>" + productos_default[i]['nombre'] + "</td>"; // Nombre
     row += "<td>" + productos_default[i]['categoria'] + "</td>"; // categoría
     row += "<td style='width: 200px;'> " + productos_default[i]['descripcion'] + "</td>"; // descripción
-    row += "<td>" + productos_default[i]['precio'] + "</td>"; // Precio
+    row += "<td> $" + productos_default[i]['precio'] + ".00</td>"; // Precio
     row += "<td>  <img style='width: 200px;' src='"+productos_default[i]['imagen']+"'>"  + "</td>"; // Imagen
-    row += "<td>  <input type='button' id='pedir' onclick='pedir_produc("+productos_default[i]['id']+")' class='submit action-button' value='Pedir Producto'/>  </td>"; // pedir
+    row += "<td>  <input type='button' id='pedir' onclick='pedir_produc("+productos_default[i]['id']+")' class='submit action-button' value='Pedir'/>  </td>"; // pedir
     row += "</tr>";
     $("#tbodys tbody").append(row);
   }
@@ -172,9 +172,9 @@ function filtrarTabla(categoria){
       row += "<td>" + productos_default[i]['nombre'] + "</td>"; // Nombre
       row += "<td>" + productos_default[i]['categoria'] + "</td>"; // categoría
       row += "<td style='width:200px; height:200px;'> " + productos_default[i]['descripcion'] + "</td>"; // descripción
-      row += "<td>" + productos_default[i]['precio'] + "</td>"; // Precio
+      row += "<td> $" + productos_default[i]['precio'] + ".00 </td>"; // Precio
       row += "<td>  <img style='width: 200px;' src='"+productos_default[i]['imagen']+"'>"  + "</td>"; // Imagen
-      row += "<td>  <input type='button' id='pedir' onclick='pedir_produc("+productos_default[i]['id']+")' class='submit action-button' value='Pedir Producto'/>  </td>"; // pedir
+      row += "<td>  <input type='button' id='pedir' onclick='pedir_produc("+productos_default[i]['id']+")' class='submit action-button' value='Pedir'/>  </td>"; // pedir
       row += "</tr>";
       $("#tbodys tbody").append(row);
     }

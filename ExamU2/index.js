@@ -19,7 +19,7 @@ function validar(){
         $('#user').addClass("is-valid");
         $('#contra').addClass("is-valid");
         //Pagina clientes
-        window.location.href = "clientes.html";
+        window.location.href = "dashboard_clientes.html";
 
     }else if(user=="vendedor" && contra=="mipssw-vend"){
         $('#user').css("border-color", "green");
