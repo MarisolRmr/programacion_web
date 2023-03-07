@@ -8,6 +8,7 @@ const productos_default = [
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 100.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/StarryHoodie_Front_460x.png?v=1669395168',
+      fecha: '30 Marzo 2023',
     },
     {
       usuario:'Jhovan',
@@ -17,6 +18,7 @@ const productos_default = [
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 100.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/DesertSunHoodie_Front_460x.png?v=1669394613',
+      fecha: '28 Marzo 2023',
     },
     {
       usuario:'kevin',
@@ -26,6 +28,7 @@ const productos_default = [
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 90.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/jerseyBackV2copy_460x.png?v=1669395020',
+      fecha: '30 Marzo 2023',
     },
     {
      usuario:'sonia',
@@ -35,6 +38,7 @@ const productos_default = [
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 80.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/dsvsadvsadvb5SOS5_merch-DROP2C-11copy_360x.png?v=1669053200',
+      fecha: '29 Marzo 2023',
     },
     {
     usuario:'Vanessa',
@@ -44,51 +48,57 @@ const productos_default = [
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 30.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/Untitled-2_8fa4f428-56c3-40e0-9505-6866b1626725_460x.png?v=1669396329',
+      fecha: '30 Marzo 2023',
     },
     {
-        usuario:'nubia',
+      usuario:'nubia',
       id: 6,
       nombre: "5SOS5 Woven Blanket",
       categoria: "Accesorios",
       descripcion: "100% Cotton, Ringspun, super soft, heavyweight hoodie. Designed and manufactured in downtown Los Angeles",
       precio: 30.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/5SOS5_merch-DROP2C-13copy_360x.png?v=1669053294',
+      fecha: '31 Marzo 2023',
     },
     {
-        usuario:'Mauricio',
+      usuario:'Mauricio',
       id: 7,
       nombre: "5SOS5 LIMITED EDITION MICHAEL CASSETTE",
       categoria: "Discos",
       descripcion: "Limited edition band member blue cassette complete with unique Michael artwork and QR code giving access to a secret mini-site filled with exclusive Michael content.",
       precio: 30.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/5SOS5_CDmocks_Luke_360x.png?v=1661763468',
+      fecha: '11 Marzo 2023',
     },
     {
-        usuario:'Daniel',
+      usuario:'Daniel',
       id: 8,
       nombre: "5SOS5 LIMITED EDITION TSHIRT BOX SET",
       categoria: "Discos",
       descripcion: "Includes standard softpak cd with limited edition t-shirt",
       precio: 55.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/Calumcassettecopy_360x.jpg?v=1667895412',
+      fecha: '12 Marzo 2023',
     },
     {
-        usuario:'Jorge',
+      usuario:'Jorge',
       id: 9,
       nombre: "5SOS5 MICHAEL CD",
       categoria: "Discos",
       descripcion: "LIMITED EDITION: Standard CD in Softpak with 24-page booklet and unique “Michael” album cover. Each comes with a album cover card with a stamped thumbprint from Michael.",
       precio: 18.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/Ashtoncassettecopy_360x.jpg?v=1667895419',
+      fecha: '30 Marzo 2023',
     },
     {
-        usuario:'Liam',
+      usuario:'Liam',
       id: 10,
       nombre: "5SOS5 STANDARD CD",
       categoria: "Discos",
       descripcion: "CD in Softpak with 24-page booklet",
       precio: 18.00,
       imagen: 'https://cdn.shopify.com/s/files/1/0002/8501/6129/products/5SOS5_CDmocks_NFT-version_360x.png?v=1661763465',
+      fecha: '28 Marzo 2023',
     },
   ];
   
@@ -132,7 +142,7 @@ const productos_default = [
       row += "<td style='width:200px'>" + productos_default[i]['categoria'] + "</td>"; // categoría
       row += "<td style='width: 200px;height:200px;'> " + productos_default[i]['descripcion'] + "</td>"; // descripción
       row += "<td style='width:200px'> $" + productos_default[i]['precio'] + ".00</td>"; // Precio
-      row += "<td> 30 de Marzo </td>"; // fecha
+      row += "<td>" + productos_default[i]['fecha'] + "</td>"; // fecha
       row += "</tr>";
       $("#tbodys tbody").append(row);
     }

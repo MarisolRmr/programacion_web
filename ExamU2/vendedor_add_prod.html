@@ -6,45 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Producto</title>
 
+  <link rel="stylesheet" href="vendedor_add_prod.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="vendedor_add_prod.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="vendedor_add_prod.js"></script>
 </head>
 <body>
-   
-<div class="row">
-    <div class="col-md" style="display: flex; justify-content: center;">
-        <form id="msform" action="" method="post">
-            <fieldset>
-                <h2 class="fs-title">Formulario</h2>
-                <h3 class="fs-subtitle">Agregar Producto</h3>
+    <!-- main container wrapper -->
+    <div class="container-fluid mainContainer">
+      <!-- Navigation menu section -->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="dashboard_vendedor.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item last">
+              <a class="nav-link" href="index.html">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- legend section   -->
 
-                <label for="id" >Id del producto:</label>
-                <input type="text" id="id" placeholder="Ingrese id"/>
-                
-                <label for="name" >Nombre del producto:</label>
-                <input type="text" id="name" placeholder="Ingrese nombre"/>
-                
-                <label for="des" >Descripción:</label>
-                <input type="text" id="des" placeholder="Ingrese descripción del producto"/>
-                
-                <label for="precio" >Precio:</label>
-                <input type="number" id="precio" placeholder="Ingrese precio del producto" min="0"/>
-                
-                <label for="fecha" >Fecha de captura:</label>
-                <input type="text" id="fecha" placeholder="Ingrese fecha de captura del producto"/>
+        <div class="row">
+            <div class="col-md" style="display: flex; justify-content: center;">
+                <form id="msform" action="" method="post">
+                    <fieldset>
+                        <h2 class="fs-title">Formulario</h2>
+                        <h3 class="fs-subtitle">Agregar Producto</h3>
+        
+                        <label for="id" >Id del producto:</label>
+                        <input type="text" id="id" placeholder="Ingrese id"/>
+                        
+                        <label for="name" >Nombre del producto:</label>
+                        <input type="text" id="name" placeholder="Ingrese nombre"/>
+                        
+                        <label for="des" >Descripción:</label>
+                        <input type="text" id="des" placeholder="Ingrese descripción del producto"/>
+                        
+                        <label for="precio" >Precio:</label>
+                        <input type="number" id="precio" placeholder="Ingrese precio del producto" min="0"/>
+                        
+                        <label for="fecha" >Fecha de captura:</label>
+                        <input type="text" id="fecha" placeholder="Ingrese fecha de captura del producto"/>
+        
+                        <label for="notas" >Notas:</label>
+                        <input type="text" id="notas" placeholder="Ingrese notas del producto"/>
+                        
+                        <input type="submit" class="submit action-button" value="Enviar"/>
+                        <input type="button" style="background-color:grey" class="action-button" onclick="regresar()" value="Regresar"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
 
-                <label for="notas" >Notas:</label>
-                <input type="text" id="notas" placeholder="Ingrese notas del producto"/>
-                
-                <input type="submit" class="submit action-button" value="Enviar"/>
-                <input type="button" style="background-color:grey" class="action-button" onclick="regresar()" value="Regresar"/>
-            </fieldset>
-        </form>
+
+<br>
+
+
+
+
+
+
+
+      <!-- footer section  -->
     </div>
-</div>
-
-</body>
+    <footer class="footer">
+      <p class="footer__text">
+        Lorena Marisol Romero Hernández
+      </p>
+    </footer>
+  </body>
+    
 </html>

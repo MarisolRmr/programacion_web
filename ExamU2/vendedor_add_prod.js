@@ -101,6 +101,6 @@ function limpiar(){
 }
 
 function regresar(){
-  window.location.href = "vendedor.html";
+  window.location.href = "dashboard_vendedor.html";
 }
   

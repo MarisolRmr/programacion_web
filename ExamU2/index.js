@@ -27,7 +27,7 @@ function validar(){
         $('#user').addClass("is-valid");
         $('#contra').addClass("is-valid");
         //Pagina vendedor
-        window.location.href = "vendedor.html";
+        window.location.href = "dashboard_vendedor.html";
 
 
     }else{
