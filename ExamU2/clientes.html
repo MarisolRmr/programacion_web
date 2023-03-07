@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="clientes.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="clientes.js"></script>
+</head>
+<body>
+    <section id="fieldset"">
+        <div >
+            <fieldset>
+          <div>
+              <h3 >Productos Registrados</h3>
+              <div>
+                <button id="gnrTble_button_todo" type="button" class="action-button">Todo</button>
+                <button id="gnrTble_button_hoddies" type="button" class="action-button" onclick="filtrarTabla('Hoodies')">Hoddies</button>
+                <button id="gnrTble_button_sweatshirt" type="button" class="action-button" onclick="filtrarTabla('Sweatshirt')">Sweatshirt</button>
+                <button id="gnrTble_button_accesorios" type="button" class="action-button" onclick="filtrarTabla('Accesorios')">Accesorios</button>
+                <button id="gnrTble_button_discos" type="button" class="action-button" onclick="filtrarTabla('Discos')">Discos</button>
+
+                <button id="salir" type="button" style="background-color:grey" class="action-button" >Cerrar Sesión</button>
+            </div>
+          </div>
+          
+          <div id="contentTable" >
+              <table id="tbodys">
+                <thead>                  
+                  <tr>
+                    <th>Clave</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+        </fieldset>
+        </div>
+      </section>
+
+</body>
+</html>

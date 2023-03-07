@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendedor</title>
+    <link rel="stylesheet" href="vendedor.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="vendedor.js"></script>
+</head>
+<body>
+
+      <section id="fieldset"">
+        <div >
+            <fieldset>
+          <div>
+              <h3 >Productos Registrados</h3>
+              <div>
+                <button id="add_prod" class="action-button" type="button">Agregar Productos</button>
+                <button id="salir" type="button" style="background-color:grey" class="action-button">Cerrar Sesión</button>
+            </div>
+          </div>
+          
+          <div id="contentTable">
+              <table id="tbodys" >
+                <thead>                  
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Fecha estimada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+        </fieldset>
+        </div>
+      </section>
+
+</body>
+</html>

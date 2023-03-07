@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>2030112 | Dashboard</title>
+  <title>2030112 | Clientes</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -27,175 +27,20 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="categoria_clientes.js"></script>
 
   <style>
-
- #container {
-	 position: relative;
-	 margin: auto;
-	 overflow: hidden;
-	 width: 700px;
-	 height: 250px;
-   display: flex;
-   justify-content: center;
-}
- h1 {
-	 font-size: 0.9em;
-	 font-weight: 100;
-	 letter-spacing: 3px;
-	 padding-top: 5px;
-	 color: #fcfcfc;
-	 padding-bottom: 5px;
-	 text-transform: uppercase;
-}
-
- .alert {
-	 font-weight: 700;
-	 letter-spacing: 5px;
-   font-size: 20px;
-   color: #4ec07d;
-}
- #face_p {
-	 margin-top: -5px;
-	 font-size: 18px;
-	 font-weight: 100;
-	 color: #5e5e5e;
-	 letter-spacing: 1px;
-}
- #success-box {
-	 width: 35%;
-	 height: 100%;
-	 left: 12%;
-	 perspective: 40px;
-}
- .dot {
-	 width: 8px;
-	 height: 8px;
-	 background: #f9b5f8;
-	 border-radius: 50%;
-	 position: absolute;
-	 top: 4%;
-	 right: 6%;
-}
- .dot:hover {
-	 background: #e390da;
-}
- .two {
-	 right: 12%;
-	 opacity: 0.5;
-}
- .face {
-	 position: absolute;
-	 width: 22%;
-	 height: 22%;
-	 background: #fcfcfc;
-	 border-radius: 50%;
-	 border: 1px solid #777;
-	 top: 21%;
-	 left: 37.5%;
-	 z-index: 2;
-	 animation: bounce 1s ease-in infinite;
-}
- .face2 {
-	 position: absolute;
-	 width: 22%;
-	 height: 22%;
-	 background: #fcfcfc;
-	 border-radius: 50%;
-	 border: 1px solid #777;
-	 top: 21%;
-	 left: 37.5%;
-	 z-index: 2;
-	 animation: roll 3s ease-in-out infinite;
-}
- .eye {
-	 position: absolute;
-	 width: 5px;
-	 height: 5px;
-	 background: #777;
-	 border-radius: 50%;
-	 top: 40%;
-	 left: 20%;
-
-}
- .right {
-	 left: 68%;
-}
- .mouth {
-	 position: absolute;
-	 top: 43%;
-	 left: 41%;
-	 width: 7px;
-	 height: 7px;
-	 border-radius: 50%;
-}
- .happy {
-	 border: 2px solid;
-	 border-color: transparent #777 #777 transparent;
-	 transform: rotate(45deg);
-}
- .shadow {
-	 position: absolute;
-	 width: 21%;
-	 height: 3%;
-	 opacity: 0.5;
-	 background: #777;
-	 left: 40%;
-	 top: 43%;
-	 border-radius: 50%;
-	 z-index: 1;
-}
- .scale {
-	 animation: scale 1s ease-in infinite;
-}
- .move {
-	 animation: move 3s ease-in-out infinite;
-}
- .message {
-	 position: absolute;
-	 width: 100%;
-	 text-align: center;
-	 height: 40%;
-	 top: 47%;
-}
- @keyframes bounce {
-	 50% {
-		 transform: translateY(-10px);
-	}
-}
- @keyframes scale {
-	 50% {
-		 transform: scale(0.9);
-	}
-}
- @keyframes roll {
-	 0% {
-		 transform: rotate(0deg);
-		 left: 25%;
-	}
-	 50% {
-		 left: 60%;
-		 transform: rotate(168deg);
-	}
-	 100% {
-		 transform: rotate(0deg);
-		 left: 25%;
-	}
-}
- @keyframes move {
-	 0% {
-		 left: 25%;
-	}
-	 50% {
-		 left: 60%;
-	}
-	 100% {
-		 left: 25%;
-	}
-}
+    h1 {
+      font-size: 0.9em;
+      font-weight: 100;
+      letter-spacing: 3px;
+      padding-top: 5px;
+      color: #fcfcfc;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+   }
 
   </style>
 
@@ -341,101 +186,61 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">Registro de Categorías de Clientes</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-             <li class="breadcrumb-item">
-              <a href="dashboard.html">Home</a>
-             </li>
-             <li class="breadcrumb-item active"><a href="login.html">Cerrar Sesión</a></li>
+              <li class="breadcrumb-item">
+                <a href="dashboard.html">Home</a>
+               </li>
+               <li class="breadcrumb-item active"><a href="login.html">Cerrar Sesión</a></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
-      <div id="container">
-        <div id="success-box">
-          <div class="dot"></div>
-          <div class="dot two"></div>
-          <div class="face2">
-            <div class="eye"></div>
-            <div class="eye right"></div>
-            <div class="mouth happy"></div>
-          </div>
-          <div class="shadow move"></div>
-          <div class="message"><h1 id="he" class="alert">It works!</h1><p id="face_p">We'll be alright - HS</div>
-        </div>
-      </div>
     
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row" style="justify-content: center;">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner" style="background-color: #fff1d6; color:black;">
-                <h1 style="color:black; font-size:18px;">Usuarios</h1>
-                <p><br></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a style="background-color: #fff1d6;" href="usuarios.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner" style="background-color: #d3e6ff; color:black;">
-                <h1 style="color:black; font-size:18px;">Productos</h1>
-                <p><br></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a style="background-color: #d3e6ff;" href="productos.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner" style="background-color: #ffd9d9; color:black;">
-                <h1 style="color:black; font-size:18px;">Categorías</h1>
-                <p><br></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a style="background-color: #ffd9d9;" href="categorias.html" class="small-box-footer"><h1 style="color:black;">Registrar <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner" style="background-color: #d7fcd2; color:black;">
-                <h1 style="color:black; font-size:18px;">Vistas</h1>
-                <p><br></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a style="background-color: #d7fcd2;" href="vistas.html" class="small-box-footer"><h1 style="color:black;">Vistas <i style="color:black;" class="fas fa-arrow-circle-right"></i></h1>  </a>
-            </div>
-          </div>
+
+    <section class="content" style="display: flex; justify-content: center;">
+      <div class="card card-primary">
+        <div class="card-header" style="display: flex; justify-content: center;">
+          <h3 class="card-title">Ingrese los siguientes datos</h3>
         </div>
-        <!-- /.row -->
-        
-      </div><!-- /.container-fluid -->
+        <!-- /.card-header minlength="3" required -->
+        <!-- form start -->
+        <form id="cate_clientes_form" action="" method="post">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Clave</label>
+                  <input type="text" class="form-control" id="clave" placeholder="Ingrese Clave" >
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Ingrese Nombre" >
+                </div>
+              </div>
+            </div>
+                
+          <!-- /.card-body -->
+        </div>
+          <div class="card-footer">
+            <div style="display: flex; justify-content: space-around;">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button type="reset" class="btn btn-secondary">Limpiar</button>
+            </div>
+          </div>
+        </form>
+      </div><!-- /.card -->
     </section>
-    <!-- /.content -->
+
+
+
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer" style="background-color: #eadaf9; color:black; display: flex; justify-content: space-between;">

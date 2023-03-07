@@ -84,7 +84,9 @@ const productos_default = [
 $( document ).ready(function() {
   console.log( "ready!" );
 
-  $("#gnrTble_button").click(function(){
+  generarTabla();
+
+  /*$("#gnrTble_button").click(function(){
     generarTabla();
   });
 
@@ -94,7 +96,7 @@ $( document ).ready(function() {
 
   $("#gnrTble_button_limpar").click(function(){
     limpiarTabla();
-  });
+  });*/
 
   $("#descargarpdf").on("click", function() {
     //libreria_jsPDF();
@@ -138,18 +140,6 @@ function filtrarTabla(tipo){
     $("#tbodys tbody").append(row);
     }
   }
-}
-
-
-// librería jsPDF
-function libreria_jsPDF() {
-  var tabla = document.getElementById("tbodys");
-
-  var pdf = new jsPDF();
-  pdf.addHTML(tabla, function() {
-    // Descargar documento PDF
-    pdf.save("tabla.pdf");
-  });
 }
 
 // librería PDFMaker
