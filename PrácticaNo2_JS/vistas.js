@@ -86,11 +86,11 @@ $( document ).ready(function() {
 
   generarTabla();
 
-  /*$("#gnrTble_button").click(function(){
+  $("#gnrTble_button_todo").click(function(){
     generarTabla();
   });
 
-  $("#gnrTble_button_todo").click(function(){
+  /*$("#gnrTble_button").click(function(){
     generarTabla();
   });
 
