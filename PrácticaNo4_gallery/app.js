@@ -1,12 +1,12 @@
 $(document).ready(function(){
   // Al hacer clic en una imagen
-  $('.gallery img-fluid').click(function(){
+  $('.img-fluid').click(function(){
     var id = $(this).data('id');
     console.log(id);
-    
+    $('.modal-body').empty();
     // Crear carrusel de imágenes
     var carousel = $('<div id="carousel" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Anterior</span></a><a class="carousel-control-next" href="#carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Siguiente</span></a></div>');
-    $('.modal-content').append(carousel);
+    $('.modal-body').append(carousel);
     
     // Agregar imágenes al carrusel
     $('.img-fluid').each(function(){
@@ -31,18 +31,14 @@ $(document).ready(function(){
     // Iniciar carrusel de imágenes
     $('#carousel').carousel();
 
+    // Cerrar modal al hacer clic en la X o en el botón Cerrar
+    $('.close, .btn-close').click(function(){
+      $('#gallery-modal').modal('hide');
+      $('#carousel').remove();
+    });
   });
-  
-  // Cerrar modal al hacer clic en la X o en el botón Cerrar
-  $('.close, .btn-close').click(function(){
-    $('#gallery-modal').modal('hide');
-    $('#carousel').remove();
-    $('.modal-backdrop').removeClass('modal-backdrop fade show');
-});
 });
 
-var backdrop = $('.modal-backdrop');
-backdrop.remove();
 
 const about = document.querySelector(".about");
 const btns = document.querySelectorAll(".tab-btn");
