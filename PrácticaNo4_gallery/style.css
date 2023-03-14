@@ -197,6 +197,15 @@ About
   object-fit: cover;
   height: 20rem;
 }
+
+.img-fluid{
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 20rem;
+  width: 5rem;
+}
+
 @media screen and (min-width: 992px) {
   .about-img {
     margin-bottom: 0;
