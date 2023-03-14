@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="shortcut icon" href="images/LM.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <section class="section">
+        <div class="title">
+            <h2>UPV</h2>
+            <p>Programación Web</p>
+            <br><br>
+            <p>Equipo</p>
+            <p>Lorena Marisol Romero Hernández</p>
+            <p>Sonia Lizbeth Muñoz Barrientos</p>
+        </div>
+        <div class="about-center section-center">
+            <article class="about-img">
+                <img id="imagen" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" alt="">
+            </article>
+            <article class="about">
+                <div class="btn-container">
+                    <button class="tab-btn active" data-id="portafolio">portafolio</button>
+                    <button class="tab-btn" data-id="nosotros">Nosotros</button>
+                    <button class="tab-btn" data-id="objetivos">Objetivos</button>
+                </div>
+                <div class="about-content">
+                    <div class="content active" id="portafolio">
+                        <h4>Portafolio</h4>
+                        <p>En 2010, luego de que Harry Styles, Liam Payne, Zayn Malik, Niall Horan y Louis Tomlinson 
+                            audicionaran para el programa The X Factor y fuesen expulsados, la jueza Nicole Scherzinger 
+                            sugirió que se les integrara en un grupo y que regresaran al programa. </p>
+                    </div>
+                    <div class="content" id="nosotros">
+                        <h4>Nosotros</h4>
+                        <p>One Direction fue una boy band británico-irlandesa formada en 2010 en Londres, 
+                            con motivo del programa The X Factor. Durante la transmisión del concurso, el quinteto, 
+                            compuesto en aquel entonces por Harry Styles, Liam Payne, Zayn Malik, Niall Horan y Louis Tomlinson.</p>
+                    </div>
+                    <div class="content" id="objetivos">
+                        <h4>Objetivos</h4>
+                        <p>La primera autobiografía de One Direction, One Direction: Forever Young (Our Official X Factor Story) 
+                            fue lanzada el 17 de febrero del 2011. Ésta fue publicada por HarperCollins; y contiene información personal, 
+                            fotografías inéditas y escenas tras bambalinas, tanto de The X Factor y X Factor Live Tour, así como las cuentas 
+                            escritas de todos los miembros de la banda. El libro alcanzó el primer puesto en la lista de los más vendidos de Sunday Times</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="col-md-4">
+              <a href="#" data-toggle="modal" data-target="#gallery-modal">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="img-fluid" data-id="1">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#" data-toggle="modal" data-target="#gallery-modal">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="img-fluid" data-id="2">
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#" data-toggle="modal" data-target="#gallery-modal">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="img-fluid" data-id="3">
+              </a>
+            </div>
+          </div>
+          
+          <!-- Modal para la galería de imágenes -->
+          <div class="modal fade" id="gallery-modal" tabindex="-1" role="dialog" aria-labelledby="gallery-modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div id="gallery-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#gallery-carousel" data-slide-to="1"></li>
+                      <li data-target="#gallery-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="d-block w-100">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="d-block w-100">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/one-direction-1666782312.jpg" class="d-block w-100">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
